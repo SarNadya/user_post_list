@@ -13,7 +13,9 @@ const PostItem = (props) => {
             </div>
 
             <div className={styles.button}>
-                <button> Развернуть </button>
+                <button onClick={() => props.remove(props.post)}>
+                    Удалить
+                </button>
             </div>
         </div>
     );

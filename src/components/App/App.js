@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import PostList from '../PostList/PostList';
 import PostForm from '../PostForm/PostForm';
 import PostFilter from './PostFilter/PostFilter';
-import MyModal from '../PostList/MyModal/MyModal';
+import MyModal from '../MyModal/MyModal';
 import MyButton from '../MyButton/MyButton';
 
 function App() {

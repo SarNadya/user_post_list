@@ -1,11 +1,11 @@
 .post {
-    width: 800px;
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
     border: 2px solid teal;
-    margin: 10px;
+    margin: 15px 20px;
 }
 
 .button {

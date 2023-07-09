@@ -52,7 +52,7 @@ function App() {
         setFilter={setFilter}
       />
       {postError &&
-        <h1> Произошла ошибка ${postError} </h1>
+        <h2 style={{display: 'flex', justifyContent: 'center', marginTop: 50, color: 'red'}}> Произошла ошибка: {postError} </h2>
       }
       {isPostsLoading
         ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>

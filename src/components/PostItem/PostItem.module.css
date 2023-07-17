@@ -9,5 +9,5 @@
 }
 
 .button {
-    margin: auto 5px;
+    display: flex;
 }

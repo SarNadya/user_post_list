@@ -6,7 +6,7 @@ const Pagination = ({totalPages, changePost, page}) => {
   let pagesArray = usePagination(totalPages);
   return (
     <div className={styles.wrapper}>
-        {pagesArray.map(p => 
+        {/* {pagesArray.map(p => 
           <span
           onClick={() => changePost(p)}
           key={p}
@@ -14,7 +14,7 @@ const Pagination = ({totalPages, changePost, page}) => {
           >
             {p}
           </span>
-        )}
+        )} */}
       </div>
   );
 };

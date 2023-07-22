@@ -1,19 +1,22 @@
 import React from "react";
 import styles from './MyModal.module.css';
+import { Modal } from 'antd';
 
 const MyModal = ({children, visible, setVisible}) => {
 
-    const rootClasses = [styles.myModal]
-    if (visible) {
-        rootClasses.push(styles.active);
-    }
+    const handleOk = () => {
+        setVisible(false);
+    };
+    const handleCancel = () => {
+        setVisible(false);
+    };
 
     return (
-        <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
-            <div className={styles.myModalContent} onClick={e => e.stopPropagation()}>
+        <>
+            <Modal open={visible} onOk={handleOk} onCancel={handleCancel}>
                 {children}
-            </div>
-        </div>
+            </Modal>
+        </>
     )
 }
 

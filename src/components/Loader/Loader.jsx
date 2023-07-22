@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from './Loader.module.css';
+import { Spin } from 'antd';
 
 const Loader = () => {
     return (
-        <div className={styles.loader}>
-            
-        </div>
+        <Spin size="large" />
     );
 };
 

@@ -12,6 +12,7 @@ import { useFetching } from '../hooks/useFetching';
 import { getPageCount } from '../utils/pages';
 import { useObserver } from '../hooks/useObserver';
 import MySelect from '../components/MySelect/MySelect';
+import { Space } from 'antd';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -52,33 +53,38 @@ function Posts() {
 
   return (
     <div>
-      <MyButton
-        style={{marginTop: 30}}
-        onClick={() => setModal(true)}
+      <Space
+        style={{ display: 'flex' }}
+        direction="vertical"
       >
-        Создать пост
-      </MyButton>
-      <MyModal
-        visible={modal}
-        setVisible={setModal}
-      >
-        <PostForm create={createPost}/>
-      </MyModal>
-      <PostFilter
-        filter={filter}
-        setFilter={setFilter}
-      />
-      <MySelect
-        value={limit}
-        onChange={value => setLimit(value)}
-        defaultValue='Количество постов на странице'
-        options={[
-          {value: 5, name: '5'},
-          {value: 10, name: '10'},
-          {value: 25, name: '25'},
-          {value: -1, name: 'Показать все'},
-        ]}
-      />
+        <MyButton
+          style={{marginTop: 30}}
+          onClick={() => setModal(true)}
+        >
+          Создать пост
+        </MyButton>
+        <MyModal
+          visible={modal}
+          setVisible={setModal}
+        >
+          <PostForm create={createPost}/>
+        </MyModal>
+        <PostFilter
+          filter={filter}
+          setFilter={setFilter}
+        />
+        <MySelect
+          value={limit}
+          onChange={value => setLimit(value)}
+          defaultValue='Количество постов на странице'
+          options={[
+            {value: 5, label: '5'},
+            {value: 10, label: '10'},
+            {value: 25, label: '25'},
+            {value: -1, label: 'Показать все'},
+          ]}
+        />
+      </Space>
       {postError &&
         <h2 style={{display: 'flex', justifyContent: 'center', marginTop: 50, color: 'red'}}> Произошла ошибка: {postError} </h2>
       }

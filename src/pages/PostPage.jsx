@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useFetching } from '../hooks/useFetching';
 import PostService from '../API/PostService';
 import Loader from '../components/Loader/Loader';
+import { Avatar, List, Space } from 'antd';
 
 const PostPage = () => {
   const params = useParams();
@@ -32,14 +33,27 @@ const PostPage = () => {
       <h2>Комментарии</h2>
       {isLoading
         ? <Loader/>
-        : <div>
-          {comments.map( com => 
-            <div key={com.id}>
-              <h3>{com.email}</h3>
-              <p>{com.body}</p>
-              <hr></hr>
-            </div>)}
-        </div>
+        : <Space
+            direction="vertical"
+            size="middle"
+            style={{
+              display: 'flex',
+            }}
+          >
+            <List
+              dataSource={comments}
+              itemLayout="horizontal"
+              renderItem={(item, index) => (
+                <List.Item>
+                  <List.Item.Meta
+                    avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
+                    title={<a href={`mailto:${item.email}`}>{item.email}</a>}
+                    description={item.body}
+                  />
+                </List.Item>
+              )}
+            />
+          </Space>
       }
     </div>
   );

@@ -15,10 +15,10 @@ const Login = () => {
   return (
     <div>
       <h1>Вход</h1>
-      <form onSubmit={login}>
+      <form>
         <MyInput type="text" placeholder="Введите логин"></MyInput>
         <MyInput type="password" placeholder="Введите пароль"></MyInput>
-        <MyButton>Войти</MyButton>
+        <MyButton onClick={login}>Войти</MyButton>
       </form>
     </div>
   );

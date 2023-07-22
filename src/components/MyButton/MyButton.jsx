@@ -1,11 +1,12 @@
 import React from "react";
 import styles from './MyButton.module.css';
+import { Button } from 'antd';
 
 const MyButton = ({children, ...props}) => {
     return (
-        <button {...props} className={styles.myBtn}>
+        <Button {...props} className={styles.myBtn}>
             {children}
-        </button>
+        </Button>
     );
 };
 

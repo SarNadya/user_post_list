@@ -1,0 +1,40 @@
+.cover {
+  margin: 0;
+  height: 720px;
+  color: #fff;
+  padding-left: 4%;
+  background: url(./img/cover.png);
+}
+
+.subtitle {
+  margin: 0;
+  padding-top: 128px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-family: Sen;
+  font-size: 56px;
+  font-weight: 700;
+  width: 60%;
+  line-height: 64px;
+  letter-spacing: -2px;
+  padding-bottom: 20px;
+}
+
+.author {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.article {
+  font-size: 16px;
+  line-height: 28px;
+  width: 43%;
+  padding-bottom: 30px;
+}
